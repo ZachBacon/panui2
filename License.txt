@@ -1,0 +1,41 @@
+Panui is licensed under a custom license, as follows:
+
+--------------
+
+This software is provided 'as-is', without any express or implied
+warranty. In no event will the authors be held liable for any damages
+arising from the use of this software.
+
+Permission is granted to anyone to use this software and/or its source
+code for any purpose, including commercial applications, and to alter
+it and redistribute it freely, subject to the following conditions:
+
+    1. The origin of the software must not be misrepresented.
+
+    2. Modified versions of the software or its source code must not
+    be misrepresented as being the original software or source code.
+
+    3. This notice may not be removed from, or altered in, any source
+    distribution of the software.
+    
+        3a. This notice is not required to be included in any compiled
+        distribution of the software, unless said distribution also
+        constitutes a source distribution.
+    
+    4. In case of use or inclusion of this software in a commercial
+    product, a public acknowledgment of this software inside the final
+    product is required.
+    
+--------------
+
+You may alternatively use Panui under the terms of the GPL, under the
+version which the mupen64plus API headers are licensed under.
+
+Acknowledgment of use or modification of the software or its source
+code is appreciated but not required.
+
+The mupen64plus API headers are licensed under a version of the GPL,
+which is referenced in each of its source files.
+
+Hiro and Nall are linked by this application, but not included. They
+are available under the ISC license.
