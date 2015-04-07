@@ -1,6 +1,8 @@
 #ifndef INCLUDED_MAINWINDOW
 #define INCLUDED_MAINWINDOW
 
+#include "memorywindow.hpp"
+
 #include <nall/nall.hpp>
 #include <hiro/hiro.hpp>
 
@@ -34,5 +36,9 @@ struct HelloHiro : Window
     void setstopped();
     
     HelloHiro();
+    
+    PopupMenu interfaces;
+    MenuItem menubtn_memory;
+    MemoryWindow memory;
 };
 #endif

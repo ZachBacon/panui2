@@ -2,6 +2,7 @@
 #include "boot.cpp"
 #include "loadrom.cpp"
 #include "mainwindow.cpp"
+#include "memorywindow.cpp"
 #include "initemu.cpp"
 
 int main(int argc, char *argv[])

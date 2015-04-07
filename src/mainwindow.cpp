@@ -105,12 +105,22 @@ HelloHiro::HelloHiro()
     //layout.append(cnv_pauser,  Geometry{10+128+4+8, 10+8       , 64  , 64});
     layout.append(btn_pauser,  Geometry{10+128+4  , 10         , 80  , 80});
     
+    img_play.load("play.png");
+    img_pause.load("pause.png");
+    
     btn_windows.setText("Interfaces");
     btn_save.setText("Save");
     btn_restore.setText("Load");
     
-    img_play.load("play.png");
-    img_pause.load("pause.png");
+    menubtn_memory.setText("Memory Viewer").onActivate([&]()
+    {
+        memory.setVisible(true);
+    });
+    interfaces.append(menubtn_memory);
+    
+    btn_windows.onActivate([&](){
+        interfaces.setVisible();
+    });
     //btn_pauser.setFont(Font::sans(24)).setText("❚❚"); //setText("▶");
     //cnv_pauser.setIcon(img_play);
     //btn_pauser.setIcon(img_play);
