@@ -94,8 +94,6 @@ HelloHiro::HelloHiro()
     setSize({10+128+4+80+10, 10+24*3+4*2+10});
     append(layout);
     
-    setCentered();
-    
     onClose(&Application::quit);
     
     layout.append(btn_load,    Geometry{10        , 10         , 128 , 24});

@@ -5,19 +5,24 @@
 #include "memorywindow.cpp"
 #include "initemu.cpp"
 
+#include <nall/platform.hpp>
+#include <iostream>
+
 int main(int argc, char *argv[])
 {
-    /*if(argc > 2)
-    {
-        std::cout << "UI: Found ROM on command line, loading: " << argv[2] << "\n";
-        loadrom(string(argv[2]));
-        corethread = SDL_CreateThread(bootscript, "BootScript", w);
-    }*/
+    char temp[PATH_MAX];
+    std::string PATH(getenv("PATH"));
+    std::string cwd(getcwd(temp, MAX_PATH));
+    #if defined(PLATFORM_WINDOWS)
+        putenv((std::string("PATH=")+cwd+"\\bin;"+PATH).c_str());
+    #else
+        putenv((std::string("PATH=")+cwd+"/bin:"+PATH).c_str());
+    #endif
+    
     
     HelloHiro helloHiro;
     if(initemu(0,0,0,0) != 0)
         return 0;
-    //Application::onMain([] { Keyboard::poll(); usleep(5000); });
     
     Application::run();
 }

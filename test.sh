@@ -2,7 +2,7 @@
 
 echo "Building Panui"
 
-executable="panui.dll"
+executable="panui.exe"
 
 mkdir -p obj
 mkdir -p bin
@@ -11,7 +11,8 @@ source=(
  "src/panui2.cpp")
 
 cflags="-std=c++14 -O0 -g -ggdb -isystem include $forceinclude -isystem .. -Wall -Wextra -pedantic -Wno-unused-parameter"
-linker="obj/hiro.o -lmingw32 $(pkg-config --libs gtk+-2.0 gtksourceview-2.0) -lws2_32 -lole32 -lSDL2"
+linker="obj/hiro.o  -lSDL2"
+linker+=" -lkernel32 -luser32 -lgdi32 -ladvapi32 -lole32 -lcomctl32 -lcomdlg32 -luxtheme -lmsimg32 -lshlwapi"
 
 cmd="g++ $cflags"
 
@@ -37,5 +38,3 @@ do
 done
 echo "g++ -o $executable $objects $linker"
 g++ -m32 -o $executable $objects $linker
-
-echo "Done building Panui"
